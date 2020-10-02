@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+#login-area {
+    width: 500px;
+    height: 300px;
+    border: 1px solid #000;
+    margin: 0 auto;
+    margin-top: 150px;
+}
+
+#login-area #login-text {
+    width: 100%;
+    margin-top: 7 0px;
+    text-align: center;
+}
+
+#login-area #login-form-area {
+    width: 100%;
+    margin-top: 50px;
+    text-align: center;
+}
+
+#login-area #login-form-area #login-form #username {
+    height: 50px;
+    width: 300px;
+    padding: 0px 5px;
+    font-size: 26px;
+    outline: none;
+    outline-offset: 0;
+}
+
+#login-area #login-form-area #login-form #login-submit {
+    font-size: 26px;
+    background-color: transparent;
+    border: 1px solid #000;
+    height: 52px;
+    width: 100px;
+    cursor: pointer;
+}
+
+#login-area #login-form-area #login-form #login-submit:hover {
+    color: #fff;
+    background-color: #000;
+}
+
+#chat-area {
+    width: 100%;
+    height: 100%;
+    background-color: violet;
+    display: none;
+}
+
+#chat-area #users-area {
+    height: 100%;
+    width: 20%;
+    border-top: 1px solid transparent;
+    background-color: wheat;
+    float: left;
+}
+
+#chat-area #users-area #online-users-text {
+    margin: 0;
+    padding: 0;
+    margin-top: 100px;
+    text-align: center;
+}
+
+#chat-area #users-area #online-users-text h1 {
+    margin: 0;
+    padding: 0;
+}
+
+#chat-area #users-area #online-users {
+    margin-top: 50px;
+}
+
+#chat-area #users-area #online-users #users {
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+#chat-area #users-area #online-users #users li {
+    list-style-type: none;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+#chat-area #message-area {
+    width: calc( 80% - 1px);
+    height: 100%;
+    background-color: white;
+    float: right;
+}
+
+#chat-area #message-area #display-message-area {
+    width: 100%;
+    height: 90%;
+    background-color: gainsboro;
+    border-top: 1px solid transparent;
+}
+
+#chat-area #message-area #display-message-area #messages {
+    margin: 0;
+    padding: 0;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-top: 10px;
+}
+
+#chat-area #message-area #display-message-area #messages li {
+    list-style-type: none;
+    padding: 10px 10px;
+    margin-bottom: 30px;
+}
+
+#chat-area #message-area #display-message-area #messages li:nth-child(odd) {
+    background-color: rgb(233, 233, 233);
+}
+
+#chat-area #message-area #message-form-area {
+    width: 100%;
+    height: 10%;
+}
+
+#chat-area #message-area #message-form-area #message-form #message {
+    height: 60px;
+    width: 90%;
+    font-size: 26px;
+    padding: 0px 5px;
+    outline: none;
+    outline-offset: 0;
+}
+
+#chat-area #message-area #message-form-area #message-form #message-submit {
+    height: 58px;
+    font-size: 26px;
+    width: 85px;
+    background-color: transparent;
+}
+
+#chat-area #message-area #message-form-area #message-form #message-submit:hover {
+    color: white;
+    background-color: violet;
+}
