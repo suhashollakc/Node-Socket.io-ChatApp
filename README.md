@@ -9,7 +9,7 @@ A simple chat application built using Node.js, Socket.io and Express.js
 
 # Screenshots attached below
 
-![Screenshot User 1](https://ibb.co/tBbFp0V"><img src="https://i.ibb.co/Q96tvWy/Screenshot-from-2020-10-02-15-30-04.png")
+![Screenshot User 1](https://i.ibb.co/Q96tvWy/Screenshot-from-2020-10-02-15-30-04.png)
 
 
-![Screenshot User 2](https://ibb.co/zSbCpQZ"><img src="https://i.ibb.co/qR9hK7p/Screenshot-from-2020-10-02-15-29-54.png)
+![Screenshot User 2](https://i.ibb.co/qR9hK7p/Screenshot-from-2020-10-02-15-29-54.png)
