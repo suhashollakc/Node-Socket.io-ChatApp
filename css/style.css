@@ -57,7 +57,7 @@ body {
 #chat-area {
     width: 100%;
     height: 100%;
-    background-color: violet;
+    /* background-color: violet; */
     display: none;
 }
 
@@ -109,6 +109,7 @@ body {
     height: 90%;
     background-color: gainsboro;
     border-top: 1px solid transparent;
+    overflow-y: scroll;
 }
 
 #chat-area #message-area #display-message-area #messages {
@@ -144,7 +145,7 @@ body {
 }
 
 #chat-area #message-area #message-form-area #message-form #message-submit {
-    height: 58px;
+    height: 70px;
     font-size: 26px;
     width: 85px;
     background-color: transparent;
@@ -154,3 +155,11 @@ body {
     color: white;
     background-color: violet;
 }
+
+/* Hide message-submit when medium breakpoint is reached */
+/* @media screen and (max-width: 800px) {
+    #chat-area #message-area #message-form-area #message-form #message-submit {
+        display: none;
+    }
+} */
+

@@ -43,6 +43,7 @@ io.on("connection", function(socket) {
 
     socket.on("new message", function(data) {
         io.emit("new message", data);
+        // console.log(data);
     });
 
 });
