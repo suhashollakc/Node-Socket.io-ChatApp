@@ -9,20 +9,30 @@
     <script type="text/javascript" src="socket.io/socket.io.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
 </head>
 
 <body>
-    <div id="login-area">
+    <div class="container-fluid" id="login-area">
         <div id="login-text">
-            <h1></h1>
+            <h1><span style="color: #ec5252;">VERSA</span>  LAUNDRY</h1>
+            <h3 style="color: #ec5252;">Internal Chat System</h3>
         </div>
 
         <div id="login-form-area">
-            <form id="login-form">
-                <input type="text" id="username" placeholder="Enter your username" autocomplete="off">
-                <input type="submit" value="login" id="login-submit">
-            </form>
+           
+                <div class="row justify-content-center">
+                    <form id="login-form">
+                    <input class="form-control" type="text" id="username" placeholder="Passcode required" autocomplete="off">
+                    <div class="row justify-content-center p-3">
+                    <input class="form-control" type="submit" value="login" id="login-submit">
+                    </div>
+                </form>
+                </div>
+                
         </div>
 
         <!-- <hr/> -->
@@ -44,7 +54,7 @@
 
         <div id="users-area">
             <div id="online-users-text">
-                <h1>Online Users</h1>
+                <h3 class="font-weight-bold">Active</h3>
             </div>
             <div id="online-users">
                 <ul id="users">
@@ -82,16 +92,35 @@
         $("#login-form").submit(function(event) {
             event.preventDefault();
             if ($("#username").val() == "" || $("#username").val() == " ") {
-                alert("invalid username");
-            } else {
+                alert("invalid Passcode");
+            } else if ($("#username").val() == "admin@123456") {
 
-                $username = $("#username").val();
+                $username = "Admin";
                 $("#login-area").
                 hide();
                 $("#chat-area").show();
                 $("#messages").html("");
                 socket.emit("has connected", $username);
-            }
+            } else if ($("#username").val() == "user@123456") {
+
+                $username = "User";
+                $("#login-area").
+                hide();
+                $("#chat-area").show();
+                $("#messages").html("");
+                socket.emit("has connected", $username);
+            } else if ($("#username").val() == "superadmin@123456") {
+                    
+                    $username = "SuperAdmin";
+                    $("#login-area").
+                    hide();
+                    $("#chat-area").show();
+                    $("#messages").html("");
+                    socket.emit("has connected", $username);
+                } 
+                else {
+                    alert("invalid PassCode");
+                }
         });
 
         $("#message-form").submit(function(event) {
